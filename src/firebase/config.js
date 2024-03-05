@@ -5,14 +5,16 @@ import * as storage from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAJPL2EsvfZlLIDJ1N4eAJDdEC9A_aqNmM",
-  authDomain: "olx-react-1429c.firebaseapp.com",
-  projectId: "olx-react-1429c",
-  storageBucket: "olx-react-1429c.appspot.com",
-  messagingSenderId: "452265299668",
-  appId: "1:452265299668:web:af0474f8b5963ec0c97541",
-  measurementId: "G-EWQ0T7X07Y"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
+
+
 
 const app = initializeApp(firebaseConfig);
 const db = firestore.getFirestore();
